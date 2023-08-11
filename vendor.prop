@@ -42,3 +42,9 @@ vendor.display.disable_idle_time_video=1
 vendor.display.disable_idle_time_hdr=1
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.set_idle_timer_ms=1100
+
+# Display Orientation
+ro.surface_flinger.primary_display_orientation=ORIENTATION_0
+debug.sf.ignore_hwc_physical_display_orientation=true
+ro.bootanim.set_orientation_4630946808805831297=ORIENTATION_90
+ro.bootanim.set_orientation_4630946922172900481=ORIENTATION_90
