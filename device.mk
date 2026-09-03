@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2026 The Paranoid Android Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -29,15 +30,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libpiex_shim
 
-# GMS
-WITH_GMS_COMMS_SUITE := false
+# Init
+PRODUCT_PACKAGES += \
+    init.device.rc
 
 # Overlays
 PRODUCT_PACKAGES += \
     ApertureOverlayDevice \
     FrameworkResOverlayDevice \
-    LineageSettingsOverlayDevice \
-    LineageSystemUIOverlayDevice \
+    AOSPASettingsOverlayDevice \
+    AOSPASystemUIOverlayDevice \
     SettingsProviderOverlayDevice \
     SystemUIOverlayDevice
 
@@ -49,15 +51,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
-# Rootdir
-PRODUCT_PACKAGES += \
-    init.device.rc
-
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
-
-# Recovery
-$(call soong_config_set_bool,recovery,target_recovery_uses_qti_drm,true)
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

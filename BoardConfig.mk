@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2026 The Paranoid Android Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -16,7 +17,7 @@ TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 TARGET_SCREEN_DENSITY := 400
 
 # Kernel
-TARGET_KERNEL_CONFIG += vendor/xiaomi/pipa.config
+KERNEL_FRAGMENT_CONFIG += vendor/xiaomi/pipa.config
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
