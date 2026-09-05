@@ -1,3 +1,5 @@
+$(call soong_config_set,tinycompress,enable_extended_compress_format,true)
+$(call soong_config_set,tinycompress,loop_compress_read,true)
 #
 # Copyright (C) 2021 The LineageOS Project
 # Copyright (C) 2026 The Paranoid Android Project
